@@ -1,6 +1,9 @@
 project(SOIL2_src)
 cmake_minimum_required(VERSION 2.6)
 
+option(DISABLE_EGL "If disabled, SOIL_GL_GetProcAddress won't work properly on GLES devices." OFF)
+add_definitions(-DSOIL_NO_EGL=${DISABLE_EGL})
+
 set(SOURCE_FILES
         etc1_utils.c
         etc1_utils.h
