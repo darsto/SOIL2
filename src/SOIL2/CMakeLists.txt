@@ -1,8 +1,7 @@
 project(SOIL2_src)
 cmake_minimum_required(VERSION 2.6)
 
-option(DISABLE_EGL "If disabled, SOIL_GL_GetProcAddress won't work properly on GLES devices." OFF)
-add_definitions(-DSOIL_NO_EGL=${DISABLE_EGL})
+option(DISABLE_EGL "Force-disable compiling against EGL." OFF)
 
 set(SOURCE_FILES
         etc1_utils.c
@@ -29,3 +28,8 @@ set(SOURCE_FILES
         )
 
 add_library(SOIL2 STATIC ${SOURCE_FILES})
+
+if (DISABLE_EGL)
+    message(STATUS "Compiling without EGL. \nNote that SOIL_GL_GetProcAddress won't work properly on GLES devices.")
+    target_compile_definitions(SOIL2 PRIVATE SOIL_NO_EGL=1)
+endif ()
