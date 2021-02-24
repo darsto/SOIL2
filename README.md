@@ -1,8 +1,10 @@
 Simple OpenGL Image Library 2
 ==========================
 
-This is a git fork of a [mercurial repository](https://bitbucket.org/SpartanJ/soil2) created by Martín Lucas Golini.
-You can find a one-to-one git mirror on the *raw* branch.
+Archived. There is now an official SOIL2 git repository: https://github.com/SpartanJ/soil2
+
+~~This is a git fork of a [mercurial repository](https://bitbucket.org/SpartanJ/soil2) created by Martín Lucas Golini.
+You can find a one-to-one git mirror on the *raw* branch.~~
 
 **Introduction:**
 --------------
